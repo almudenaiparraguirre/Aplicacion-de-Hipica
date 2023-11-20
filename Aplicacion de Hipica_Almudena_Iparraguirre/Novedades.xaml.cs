@@ -10,30 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para Novedades.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Novedades : Window
     {
-        public MainWindow()
+        public Novedades()
         {
             InitializeComponent();
-        }
-
-        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            TextBlock textBlock = (TextBlock)sender;
-
-            if (textBlock != null)
-            {
-                Clipboard.SetText(textBlock.Text);
-                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
-            }
         }
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
@@ -56,23 +44,30 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = (TextBlock)sender;
+
+            if (textBlock != null)
+            {
+                Clipboard.SetText(textBlock.Text);
+                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
+            }
+        }
+
+        private void mainWindow_click(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+            mainWindow.Show();
+        }
+
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
         }
 
-        private void novedades_click(object sender, MouseButtonEventArgs e)
-        {
-            Novedades novedades = new Novedades();
-            this.Close();
-            novedades.Show();
-        }
-
-        private void imagen_click(object sender, MouseButtonEventArgs e)
-        {
-        }
-
-        private void quienesSomosClick(object sender, MouseButtonEventArgs e)
+        private void quienesSomos_click(object sender, MouseButtonEventArgs e)
         {
             QuienesSomos quienesSomos = new QuienesSomos();
             this.Close();

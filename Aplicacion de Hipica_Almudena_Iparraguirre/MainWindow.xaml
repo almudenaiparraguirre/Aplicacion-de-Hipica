@@ -5,76 +5,164 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplicacion_de_Hipica_Almudena_Iparraguirre"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="450" Width="900"
+        MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
         Background="#EEF0F2">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Image Grid.Column="0" Source="images/telefono.png" Margin="100,0,0,0" Cursor="Hand"/>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Teléfono, correo, instagram, facebook -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,10,0,0">
+                <Image Grid.Column="0" Source="images/telefono.png" Margin="120,0,0,0" Cursor="Hand"/>
                 <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" 
                        Text="+34663424110" FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
                        MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
                 <Image Source="images/correo2.png" Width="50" Cursor="Hand"/>
-            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
                        FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
-                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1"/>
-            <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
-            <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
-        </StackPanel>
+                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+                <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
+                <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
+            </StackPanel>
 
-        <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Right" Width="800" Height="50">
-            <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Inicio"
+            <!-- Menú horizontal superior -->
+            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Left" Width="900" Height="50">
+                <StackPanel.Effect>
+                    <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                </StackPanel.Effect>
+                <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" Foreground="#B71C1C"/>
-                <TextBlock VerticalAlignment="Center" Margin="40,0,0,0" Text="Novedades"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="quienesSomosClick"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="tienda_click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="40,0,0,0" Text="¿Quiénes somos?"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="40,0,0,0" Text="Tienda"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_2"
-                           MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="40,0,0,0" Text="Precios"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="40,0,0,0" Text="Galería"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="100,0,0,0">
-                <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
+                    <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
-                       Cursor="Hand" MaxHeight="22" />
+                       Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
+                </StackPanel>
+                <ContentControl x:Name="contentControl" />
             </StackPanel>
-            <ContentControl x:Name="contentControl" />
-        </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="10,30,0,0">
-            <StackPanel Margin="20,0,0,20" Orientation="Vertical" Width="380">
-                <TextBlock Text="La app para gestionar tus clases" FontSize="20" Margin="0,0,5,20" FontFamily="Karla" FontWeight="Bold"/>
-                <TextBlock TextWrapping="Wrap" FontFamily="Karla" Text="GESTHIP es una aplicación multiplataforma que te permite organizar y agendar las clases, controlar las asistencias y pagos y administrar fichas de alumnos, clientes, profesores y caballos. También permite llevar el control de gastos de caballos, control de facturación y la rentabilidad en 1 sola plataforma. Gracias al completo programa de gestión equino todo será más fácil y productivo. Aumenta el control, reduce las pérdidas, ahorra tiempo." Margin="0,0,10,0"/>
+            <!-- Contenido página principal -->
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="20,30,0,0" HorizontalAlignment="Left">
+                <StackPanel Margin="20,0,0,20" Orientation="Vertical" Width="430">
+                    <TextBlock Text="La app para gestionar tus clases" FontSize="20" Margin="0,0,5,20" FontFamily="Karla" 
+                               FontWeight="Bold" TextAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap" FontFamily="Karla" LineHeight="18"
+                               Text="GESTHIP es una aplicación multiplataforma que te permite organizar y agendar las clases, controlar las asistencias y pagos y administrar fichas de alumnos, clientes, profesores y caballos. También permite llevar el control de gastos de caballos, control de facturación y la rentabilidad en 1 sola plataforma. Gracias al completo programa de gestión equino todo será más fácil y productivo. Aumenta el control, reduce las pérdidas, ahorra tiempo." Margin="0,0,10,0"/>
+                </StackPanel>
+                <StackPanel>
+                    <StackPanel.Effect>
+                        <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                    </StackPanel.Effect>
+                    <Image Source="images/video_gesthip.png" Margin="45,0,0,0" MaxHeight="180" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="imagen_click"/>
+                </StackPanel>
             </StackPanel>
-            <Image Source="images/video_gesthip.png" Margin="35,0,0,0" MaxHeight="180" RenderTransformOrigin="0.5,0.5"/>
-        </StackPanel>
-    </Grid>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="20,30,0,0">
+                <StackPanel>
+                    <Image Source="images/todos-connectados.jpg" Margin="0,0,0,0" MaxHeight="150" RenderTransformOrigin="0.5,0.5"/>
+                    <StackPanel.Effect>
+                        <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                    </StackPanel.Effect>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="APLICACIÓN MULTIPLATAFORMA para SOLUCIONAR TUS PROBLEMAS" Margin="20,0,0,0" FontFamily="Karla" FontWeight="Bold"
+                               Foreground="#B71C1C" FontSize="15"></TextBlock>
+                    <TextBlock TextWrapping="Wrap" Width="460" Margin="0,15,0,0" FontWeight="DemiBold" TextAlignment="Center">
+                        <Run Text="GESTHIP es una aplicación web compatible con " Foreground="Black"/>
+                        <Run Text="TODOS TUS SISTEMAS OPERATIVOS" Foreground="#B71C1C"/>
+                        <Run Text=" (Windows, MAC, Linux…) y con " Foreground="Black"/>
+                        <Run Text="TODOS TUS DISPOSITIVOS" Foreground="#B71C1C"/>
+                        <Run Text=" (Ordenador, Tablet, Móvil…)" Foreground="Black"/>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Image Source="images/configuracion.jpg" Margin="20,0,0,0" MaxHeight="150" RenderTransformOrigin="0.5,0.5"/>
+                    <StackPanel.Effect>
+                        <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                    </StackPanel.Effect>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Width="900" Grid.Row="4" Margin="0,20,0,0" Background="#D4D9DD" HorizontalAlignment="Left">
+                <TextBlock TextAlignment="Center" Text="Usa la app desde cualquier dispositivo, ten tus datos en la nube y consúltalos siempre que necesites."
+                           FontWeight="DemiBold"/>
+            </StackPanel>
+
+            <StackPanel Width="900" Grid.Row="5">
+                <TextBlock Text="MÓDULOS DE GESTHIP" FontFamily="Karla" FontWeight="Bold" Margin="0,25,0,0"
+                       TextAlignment="Center" FontSize="20"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center">
+                <TextBlock Text="MÓDULO ESCUELA" Padding="100,10,100,10" Foreground="White" FontFamily="Karla"
+               Background="#B71C1C" Margin="0,20,0,0"/>
+                <TextBlock Text="MÓDULO PUPILAJE" Padding="100,10,100,10" Foreground="White" FontFamily="Karla"
+               Background="#184F6F" Margin="100,20,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="7" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="- ORGANIZA Y AGENDA TODAS LAS CLASES DEL CURSO" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla" Margin="0,20,0,0"/>
+                    <TextBlock Text="- CONTROLA LOS PAGOS Y EMITE RECIBOS" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- GESTIONA EL CONTROL DE PRESENCIA" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- CONTROLA LOS FICHAJES Y VACACIONES" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- CALCULA AUTOMÁTICAMENTE LOS SUELTOS" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- ANOTA LOS GASTOS DE LOS PROVEEDORES" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- CONSULTA LA RENTABILIDAD DE TU CENTRO" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- POSIBLITA A TUS ALUMNOS USAR LA APLICACIÓN" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                    <TextBlock Text="- GESTIONA LA DOCUMENTACIÓN FIRMADA" Padding="50,2,50,2" Foreground="#B71C1C" FontFamily="Karla"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="- ORGANIZA Y AGENDA TODAS LAS CLASES DEL CURSO" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla" Margin="0,20,0,0"/>
+                    <TextBlock Text="- CONTROLA LOS PAGOS Y EMITE RECIBOS" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- GESTIONA EL CONTROL DE PRESENCIA" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- CONTROLA LOS FICHAJES Y VACACIONES" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- CALCULA AUTOMÁTICAMENTE LOS SUELTOS" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- ANOTA LOS GASTOS DE LOS PROVEEDORES" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- CONSULTA LA RENTABILIDAD DE TU CENTRO" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- POSIBLITA A TUS ALUMNOS USAR LA APLICACIÓN" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                    <TextBlock Text="- GESTIONA LA DOCUMENTACIÓN FIRMADA" Padding="50,2,50,2" Foreground="#184F6F" FontFamily="Karla"/>
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Text="Aviso Legal | Política de Privacidad | Política de Redes Sociales | Política de Cookies" Grid.Row="8" TextAlignment="Center"
+                       Margin="0,40,0,0"/>
+            <TextBlock Text="GESTHIP® - Copyright - 2022" Grid.Row="9" TextAlignment="Center"
+                       Margin="0,0,0,5"/>
+            <Frame x:Name="contentFrame"/>
+        </Grid>
+    </ScrollViewer>
 </Window>

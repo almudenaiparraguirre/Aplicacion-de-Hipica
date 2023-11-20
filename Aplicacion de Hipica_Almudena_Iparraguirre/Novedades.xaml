@@ -1,0 +1,107 @@
+﻿<Window x:Class="Aplicacion_de_Hipica_Almudena_Iparraguirre.Novedades"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplicacion_de_Hipica_Almudena_Iparraguirre"
+        mc:Ignorable="d"
+        Title="Novedades" Height="450" Width="900"
+        MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
+        Background="#EEF0F2">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Teléfono, correo, instagram, facebook -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,10,0,0">
+                <Image Grid.Column="0" Source="images/telefono.png" Margin="120,0,0,0" Cursor="Hand"/>
+                <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" 
+                       Text="+34663424110" FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
+                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+                <Image Source="images/correo2.png" Width="50" Cursor="Hand"/>
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
+                       FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
+                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+                <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
+                <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
+            </StackPanel>
+
+            <!-- Menú horizontal superior -->
+            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Left" Width="900" Height="50">
+                <StackPanel.Effect>
+                    <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                </StackPanel.Effect>
+                <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="mainWindow_click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" Foreground="#B71C1C"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="quienesSomos_click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="tienda_click"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave"/>
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave"/>
+                    <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
+                       Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
+                       Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
+                </StackPanel>
+                <ContentControl x:Name="contentControl" />
+            </StackPanel>
+
+            <!-- Cuerpo -->
+            <StackPanel Width="900" Grid.Row="2">
+                <TextBlock Text="ÚLTIMAS NOVEDADES" FontFamily="Karla" FontWeight="Bold" Margin="0,25,0,0"
+                       TextAlignment="Center" FontSize="30"/>
+            </StackPanel>
+
+            <TextBlock Grid.Row="3" Text="Espacios de Entretenimiento para Visitantes" Margin="20,20,0,0" Foreground="#B71C1C" FontWeight="Regular"
+                       FontSize="25" FontFamily="Karla"/>
+
+            <TextBlock Grid.Row="4" Text="Muchas instalaciones han ampliado su enfoque al entretenimiento para visitantes, con restaurantes, tiendas de souvenirs y áreas de observación para disfrutar de los eventos ecuestres en un ambiente cómodo y agradable."
+                       TextWrapping="Wrap" FontFamily="Karla" Width="700" Margin="0,20,0,0" FontSize="20"/>
+
+            <Image Grid.Row="5" HorizontalAlignment="Center" Source="images/restaurante.jpeg" 
+                       Width="350" Cursor="Hand" Margin="20,20,0,0"/>
+
+            <TextBlock Grid.Row="6" Text="Pistas de entrenamiento innovadoras" Margin="20,20,0,0" Foreground="#B71C1C" FontWeight="Regular"
+                       FontSize="25" FontFamily="Karla"/>
+
+            <TextBlock Grid.Row="7" Text="Las pistas de entrenamiento se han modernizado con superficies personalizadas, sistemas de iluminación de última generación y riego automatizado. Esto brinda un entorno de entrenamiento de primera clase para jinetes y caballos."
+                       TextWrapping="Wrap" FontFamily="Karla" Width="700" Margin="0,20,0,0" FontSize="20"/>
+
+            <Image Grid.Row="8" HorizontalAlignment="Center" Source="images/pistas.jpg" 
+                       Width="350" Cursor="Hand" Margin="20,20,0,0"/>
+
+            <TextBlock Text="Aviso Legal | Política de Privacidad | Política de Redes Sociales | Política de Cookies" Grid.Row="9" TextAlignment="Center"
+                       Margin="0,40,0,0"/>
+            <TextBlock Text="GESTHIP® - Copyright - 2022" Grid.Row="10" TextAlignment="Center"
+                       Margin="0,0,0,5"/>
+        </Grid>
+    </ScrollViewer>
+</Window>

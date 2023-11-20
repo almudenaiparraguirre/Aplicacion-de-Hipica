@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="QuienesSomos.xaml.cs">
+      <DependentUpon>QuienesSomos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tienda.xaml.cs">
+      <DependentUpon>Tienda.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,8 +73,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Novedades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="QuienesSomos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tienda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Novedades.xaml.cs">
+      <DependentUpon>Novedades.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +107,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Karla\Karla-Italic-VariableFont_wght.ttf" />
+    <Resource Include="Karla\Karla-VariableFont_wght.ttf" />
+    <Resource Include="Karla\static\Karla-Bold.ttf" />
+    <Resource Include="Karla\static\Karla-BoldItalic.ttf" />
+    <Resource Include="Karla\static\Karla-ExtraBold.ttf" />
+    <Resource Include="Karla\static\Karla-ExtraBoldItalic.ttf" />
+    <Resource Include="Karla\static\Karla-ExtraLight.ttf" />
+    <Resource Include="Karla\static\Karla-ExtraLightItalic.ttf" />
+    <Resource Include="Karla\static\Karla-Italic.ttf" />
+    <Resource Include="Karla\static\Karla-Light.ttf" />
+    <Resource Include="Karla\static\Karla-LightItalic.ttf" />
+    <Resource Include="Karla\static\Karla-Medium.ttf" />
+    <Resource Include="Karla\static\Karla-MediumItalic.ttf" />
+    <Resource Include="Karla\static\Karla-Regular.ttf" />
+    <Resource Include="Karla\static\Karla-SemiBold.ttf" />
+    <Resource Include="Karla\static\Karla-SemiBoldItalic.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +151,19 @@
     <Resource Include="images\telefono.png" />
     <Resource Include="images\todos-connectados.jpg" />
     <Resource Include="images\video_gesthip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Karla\OFL.txt" />
+    <Resource Include="Karla\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\restaurante.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\pistas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\quienesSomos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
