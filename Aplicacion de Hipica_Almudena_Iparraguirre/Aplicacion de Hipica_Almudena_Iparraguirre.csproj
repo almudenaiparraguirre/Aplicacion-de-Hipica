@@ -94,5 +94,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\arrowback.png" />
+    <Resource Include="images\bolsaBotas.jpg" />
+    <Resource Include="images\botas.png" />
+    <Resource Include="images\caballo_cabezada.png" />
+    <Resource Include="images\cabezada_mieuxVogue.png" />
+    <Resource Include="images\configuracion.jpg" />
+    <Resource Include="images\correo.png" />
+    <Resource Include="images\correo2.png" />
+    <Resource Include="images\facebook.png" />
+    <Resource Include="images\instagram.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\logotipocaballo_167x167.png" />
+    <Resource Include="images\material-symbols_person.png" />
+    <Resource Include="images\pantalones-termicos.jpg" />
+    <Resource Include="images\pantalonNella.jpg" />
+    <Resource Include="images\silla.png" />
+    <Resource Include="images\telefono.png" />
+    <Resource Include="images\todos-connectados.jpg" />
+    <Resource Include="images\video_gesthip.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

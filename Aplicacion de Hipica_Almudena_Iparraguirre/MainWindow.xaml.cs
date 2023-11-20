@@ -24,5 +24,57 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         {
             InitializeComponent();
         }
+
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = (TextBlock)sender;
+
+            if (textBlock != null)
+            {
+                Clipboard.SetText(textBlock.Text);
+                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
+            }
+        }
+
+        private void TextBlock_MouseLeftButtonUp_1(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock textBlock = (TextBlock)sender;
+
+            if (textBlock != null)
+            {
+                Clipboard.SetText(textBlock.Text);
+                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
+            }
+        }
+
+        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
+            }
+        }
+
+        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush(Colors.Black);
+            }
+        }
+
+        private void TextBlock_MouseLeftButtonUp_2(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
