@@ -55,12 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Galeria.xaml.cs">
+      <DependentUpon>Galeria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Precios.xaml.cs">
+      <DependentUpon>Precios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductItem.xaml.cs">
+      <DependentUpon>ProductItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QuienesSomos.xaml.cs">
       <DependentUpon>QuienesSomos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tienda.xaml.cs">
       <DependentUpon>Tienda.xaml</DependentUpon>
     </Compile>
+    <Page Include="Galeria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +87,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Novedades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Precios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +185,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\quienesSomos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cabezada.jpg" />
+    <Resource Include="images\mosquero.jpg" />
+    <Resource Include="images\sudadero.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

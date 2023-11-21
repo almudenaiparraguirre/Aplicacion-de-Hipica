@@ -8,99 +8,290 @@
         Title="Tienda" Height="450" Width="900"
         MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
         Background="#EEF0F2">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
 
-        <!-- Teléfono, correo, instagram, facebook -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,10,0,0">
-            <Image Grid.Column="0" Source="images/telefono.png" Margin="120,0,0,0" Cursor="Hand"/>
-            <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" 
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Teléfono, correo, instagram, facebook -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,10,0,0">
+                <Image Grid.Column="0" Source="images/telefono.png" Margin="120,0,0,0" Cursor="Hand"/>
+                <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" 
                        Text="+34663424110" FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
                        MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
-            <Image Source="images/correo2.png" Width="50" Cursor="Hand"/>
-            <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
+                <Image Source="images/correo2.png" Width="50" Cursor="Hand"/>
+                <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
                        FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
                        MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
-            <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
-            <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
-        </StackPanel>
+                <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
+                <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
+            </StackPanel>
 
-        <!-- Menú horizontal superior -->
-        <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Left" Width="900" Height="50">
-            <StackPanel.Effect>
-                <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
-            </StackPanel.Effect>
-            <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
+            <!-- Menú horizontal superior -->
+            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Left" Width="900" Height="50">
+                <StackPanel.Effect>
+                    <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
+                </StackPanel.Effect>
+                <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="mainWindow_click"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseLeftButtonUp="quienesSomos_click"
                             MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" Foreground="#B71C1C"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
+                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave"/>
-                <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
+                    <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
                        Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
+                </StackPanel>
+                <ContentControl x:Name="contentControl" />
             </StackPanel>
-            <ContentControl x:Name="contentControl" />
-        </StackPanel>
 
-        <TextBlock Text="TOP OFERTAS" FontFamily="Karla" FontWeight="Light" Grid.Row="2" Margin="30,20,0,0"
+            <!-- Top ofertas -->
+            <TextBlock Text="TOP OFERTAS" FontFamily="Karla" FontWeight="Light" Grid.Row="2" Margin="30,20,0,0"
                    FontSize="20" Foreground="#B71C1C"/>
-        <Border BorderBrush="#B71C1C" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Grid.Row="3" Margin="30,15,50,0"/>
+            <Border BorderBrush="#B71C1C" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Grid.Row="3" Margin="30,15,50,0"/>
 
-        <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="30,20,0,0" Grid.Row="4" Width="200" Height="200" HorizontalAlignment="Left">
+            <!-- Productos oferta -->
+            <!-- 1er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="30,20,0,0" Grid.Row="4" Width="200" Height="200" HorizontalAlignment="Left">
 
-            <Grid>
-                <!-- Fila 1: Precio -->
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock Text="47.08 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="47.08 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
                                FontFamily="Karla" TextDecorations="Strikethrough"/>
-                    <TextBlock Text="37.08 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,5,0,0"
+                        <TextBlock Text="37.08 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,5,0,0"
                                FontFamily="Karla" Foreground="#B71C1C"/>
-                </StackPanel>
+                    </StackPanel>
 
-                <!-- Fila 2: Imagen del Producto -->
-                <StackPanel>
-                    <Image Source="images/cabezada_mieuxVogue.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/cabezada_mieuxVogue.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
                        Margin="0,25,0,10" Width="90"/>
-                </StackPanel>
+                    </StackPanel>
 
-                <!-- Fila 3: Nombre del Producto -->
-                <TextBlock Text="Cabezadas de Cuadra LeMieux Vogue" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Cabezadas de Cuadra LeMieux Vogue" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
-            </Grid>
-        </Border>
+                </Grid>
+            </Border>
 
-        <TextBlock Text="LO MÁS VENDIDO" FontFamily="Karla" FontWeight="Light" Grid.Row="5" Margin="30,20,0,0"
+            <!-- 2º Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="330,20,0,0" Grid.Row="4" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="84.00 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla" TextDecorations="Strikethrough"/>
+                        <TextBlock Text="70.80 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,5,0,0"
+                               FontFamily="Karla" Foreground="#B71C1C"/>
+                    </StackPanel>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/bolsaBotas.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="100"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Bolsa para Botas y Casco Equiline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                </Grid>
+            </Border>
+
+            <!-- 3er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="630,20,0,0" Grid.Row="4" Width="200" Height="200" HorizontalAlignment="Left"
+                    MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="84.00 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla" TextDecorations="Strikethrough"/>
+                        <TextBlock Text="70.80 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,5,0,0"
+                               FontFamily="Karla" Foreground="#B71C1C"/>
+                    </StackPanel>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/botas.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="120"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Botas de montar de piel, fabricadas en Europa" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
+
+                    <!--<Grid x:Name="overlayGrid" Background="Transparent" Visibility="Hidden">
+                        <Rectangle Fill="White" Opacity="0.7"/>
+                        <Button Content="Comprar" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Background="#B71C1C" Foreground="White" FontFamily="Karla" Click="comprar_Click" 
+                                Padding="10,5,10,5"/>
+                    </Grid> -->
+                    <local:ProductItem />
+                </Grid>
+            </Border>
+
+            <TextBlock Text="LO MÁS VENDIDO" FontFamily="Karla" FontWeight="Light" Grid.Row="5" Margin="30,20,0,0"
                    FontSize="20" Foreground="#B71C1C"/>
-        <Border BorderBrush="#B71C1C" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Grid.Row="6" Margin="30,15,50,0"/>
-    </Grid>
+            <Border BorderBrush="#B71C1C" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Grid.Row="6" Margin="30,15,50,0"/>
+
+
+            <!-- Productos más vendidos -->
+            <!-- 1er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="30,20,0,0" Grid.Row="7" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                        <TextBlock Text="59.99 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla"/>
+
+                        <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/pantalonNella.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,25,0,10" Width="90"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Pantalones de Montar para Mujer Horze Nella" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <!-- 2º Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="330,20,0,0" Grid.Row="7" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <TextBlock Text="35.90 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla"/>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/pantalones-termicos.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="120"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Pantalones Térmicos Alice para Mujer" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                </Grid>
+            </Border>
+
+            <!-- 3er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="630,20,0,0" Grid.Row="7" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <TextBlock Text="450.00 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla"/>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/silla.png" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="120"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Silla de montar inglesa de doma CASTEL" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <!-- 1er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="30,20,0,0" Grid.Row="8" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <TextBlock Text="7.99 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla"/>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/mosquero.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,25,0,10" Width="140"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Mosquero HH Antimoscas" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                </Grid>
+            </Border>
+
+            <!-- 2º Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="330,20,0,0" Grid.Row="8" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <TextBlock Text="20.99 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"
+                               FontFamily="Karla"/>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/sudadero.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="130"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Sudadero para Silla Vaquera Acolchado" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                </Grid>
+            </Border>
+
+            <!-- 3er Producto -->
+            <Border BorderBrush="#B71C1C" BorderThickness="5" Margin="630,20,0,0" Grid.Row="8" Width="200" Height="200" HorizontalAlignment="Left">
+
+                <Grid>
+                    <!-- Fila 1: Precio -->
+                    <TextBlock Text="29.95 €" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25,5,0,0"
+                               FontFamily="Karla"/>
+
+                    <!-- Fila 2: Imagen del Producto -->
+                    <StackPanel>
+                        <Image Source="images/cabezada.jpg" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,30,0,10" Width="120"/>
+                    </StackPanel>
+
+                    <!-- Fila 3: Nombre del Producto -->
+                    <TextBlock Text="Cabezada Cuadra BR Dante" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5"
+                           FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <TextBlock Text="Aviso Legal | Política de Privacidad | Política de Redes Sociales | Política de Cookies" Grid.Row="9" TextAlignment="Center"
+                       Margin="0,40,0,0"/>
+            <TextBlock Text="GESTHIP® - Copyright - 2022" Grid.Row="10" TextAlignment="Center"
+                       Margin="0,0,0,5"/>
+        </Grid>
+    </ScrollViewer>
 </Window>

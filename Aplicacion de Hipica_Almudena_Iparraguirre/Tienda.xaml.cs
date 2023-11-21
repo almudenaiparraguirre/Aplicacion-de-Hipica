@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -77,6 +78,27 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         }
 
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Border_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (sender is ProductItem productItem)
+            {
+                productItem.ShowOverlay();
+            }
+        }
+
+        private void Border_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (sender is ProductItem productItem)
+            {
+                productItem.HideOverlay();
+            }
+        }
+
+        private void comprar_Click(object sender, RoutedEventArgs e)
         {
 
         }
