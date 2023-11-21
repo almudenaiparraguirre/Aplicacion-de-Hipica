@@ -100,7 +100,20 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 
         private void comprar_Click(object sender, RoutedEventArgs e)
         {
+        }
 
+        private void precios_click(object sender, MouseButtonEventArgs e)
+        {
+            Precios precios = new Precios();
+            this.Close();
+            precios.Show();
+        }
+
+        private void galeriaClick(object sender, MouseButtonEventArgs e)
+        {
+            Galeria galeria = new Galeria();
+            this.Close();
+            galeria.Show();
         }
     }
 }

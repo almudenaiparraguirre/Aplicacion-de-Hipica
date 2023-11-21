@@ -71,7 +71,6 @@
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
                        Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
                 </StackPanel>
-                <ContentControl x:Name="contentControl" />
             </StackPanel>
 
             <!-- Contenido página principal -->
@@ -162,6 +161,15 @@
                        Margin="0,40,0,0"/>
             <TextBlock Text="GESTHIP® - Copyright - 2022" Grid.Row="9" TextAlignment="Center"
                        Margin="0,0,0,5"/>
+
+            <Popup x:Name="loginPopup" Placement="Bottom" StaysOpen="False" IsOpen="False" Grid.Row="2">
+                <Border Background="White" BorderBrush="#B71C1C" BorderThickness="1" CornerRadius="5">
+                    <StackPanel Margin="5">
+                        <TextBlock Text="Iniciar Sesión" FontWeight="Bold" Foreground="#B71C1C" FontSize="14" Margin="0,0,0,5"/>
+                        <Button Content="Aceptar" Background="#B71C1C" Foreground="White" Padding="5" Margin="0,0,0,5"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
         </Grid>
     </ScrollViewer>
 </Window>

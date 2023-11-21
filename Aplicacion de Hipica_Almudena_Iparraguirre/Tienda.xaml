@@ -64,10 +64,10 @@
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" Foreground="#B71C1C"/>
                     <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="precios_click"/>
                     <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="galeriaClick"/>
                     <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
                        Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
@@ -102,6 +102,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Cabezadas de Cuadra LeMieux Vogue" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -126,6 +127,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Bolsa para Botas y Casco Equiline" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -151,13 +153,6 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Botas de montar de piel, fabricadas en Europa" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
-
-                    <!--<Grid x:Name="overlayGrid" Background="Transparent" Visibility="Hidden">
-                        <Rectangle Fill="White" Opacity="0.7"/>
-                        <Button Content="Comprar" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                    Background="#B71C1C" Foreground="White" FontFamily="Karla" Click="comprar_Click" 
-                                Padding="10,5,10,5"/>
-                    </Grid> -->
                     <local:ProductItem />
                 </Grid>
             </Border>
@@ -185,6 +180,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Pantalones de Montar para Mujer Horze Nella" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -205,6 +201,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Pantalones Térmicos Alice para Mujer" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -225,6 +222,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Silla de montar inglesa de doma CASTEL" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -245,6 +243,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Mosquero HH Antimoscas" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -265,6 +264,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Sudadero para Silla Vaquera Acolchado" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 
@@ -285,6 +285,7 @@
                     <!-- Fila 3: Nombre del Producto -->
                     <TextBlock Text="Cabezada Cuadra BR Dante" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5"
                            FontFamily="Karla" FontSize="10" Foreground="#B71C1C" Width="170" TextWrapping="Wrap" TextAlignment="Center"/>
+                    <local:ProductItem />
                 </Grid>
             </Border>
 

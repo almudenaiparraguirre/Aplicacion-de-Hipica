@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,33 +15,13 @@ using System.Windows.Shapes;
 namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 {
     /// <summary>
-    /// Lógica de interacción para QuienesSomos.xaml
+    /// Lógica de interacción para Producto.xaml
     /// </summary>
-    public partial class QuienesSomos : Window
+    public partial class Producto : Window
     {
-        public QuienesSomos()
+        public Producto()
         {
             InitializeComponent();
-        }
-
-        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
-        {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
-            }
-        }
-
-        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
-        {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush(Colors.Black);
-            }
         }
 
         private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -56,21 +35,21 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
+        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
         private void mainWindow_click(object sender, MouseButtonEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow main = new MainWindow();
             this.Close();
-            mainWindow.Show();
-        }
-
-        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Contactar_Click(object sender, RoutedEventArgs e)
-        {
-            Process.Start("https://gesthip.com/contacto/");
+            main.Show();
         }
 
         private void novedades_click(object sender, MouseButtonEventArgs e)
@@ -78,13 +57,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             Novedades novedades = new Novedades();
             this.Close();
             novedades.Show();
-        }
-
-        private void tienda_click(object sender, MouseButtonEventArgs e)
-        {
-            Tienda tienda = new Tienda();
-            this.Close();
-            tienda.Show();
         }
 
         private void precios_click(object sender, MouseButtonEventArgs e)
@@ -99,6 +71,18 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             Galeria galeria = new Galeria();
             this.Close();
             galeria.Show();
+        }
+
+        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void quienesSomos_click(object sender, MouseButtonEventArgs e)
+        {
+            QuienesSomos quienes = new QuienesSomos();
+            this.Close();
+            quienes.Show();
         }
     }
 }

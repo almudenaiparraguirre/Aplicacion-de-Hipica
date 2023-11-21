@@ -58,7 +58,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            loginPopup.IsOpen = true;
         }
 
         private void novedades_click(object sender, MouseButtonEventArgs e)
@@ -70,6 +70,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 
         private void imagen_click(object sender, MouseButtonEventArgs e)
         {
+            loginPopup.IsOpen = true;
         }
 
         private void quienesSomosClick(object sender, MouseButtonEventArgs e)

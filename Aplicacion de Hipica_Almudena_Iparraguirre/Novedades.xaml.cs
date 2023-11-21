@@ -80,5 +80,19 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             this.Close();
             tienda.Show();
         }
+
+        private void preciosClick(object sender, MouseButtonEventArgs e)
+        {
+            Precios precios = new Precios();
+            this.Close();
+            precios.Show();
+        }
+
+        private void galeriaClick(object sender, MouseButtonEventArgs e)
+        {
+            Galeria galeria = new Galeria();
+            this.Close();
+            galeria.Show();
+        }
     }
 }

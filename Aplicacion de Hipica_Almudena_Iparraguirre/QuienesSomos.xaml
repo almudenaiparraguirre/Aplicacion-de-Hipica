@@ -62,10 +62,10 @@
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="tienda_click"/>
                     <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="precios_click"/>
                     <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave"/>
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="galeriaClick"/>
                     <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
                        Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>

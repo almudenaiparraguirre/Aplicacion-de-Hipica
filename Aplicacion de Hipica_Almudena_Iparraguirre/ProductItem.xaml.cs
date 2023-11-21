@@ -26,19 +26,31 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             InitializeComponent();
         }
 
-        private void Border_MouseLeave(object sender, MouseEventArgs e)
-        {
-            HideOverlay();
-        }
-
         private void Border_MouseEnter(object sender, MouseEventArgs e)
         {
+            overlayRectangle.Opacity = 0.7;
+            overlayButton.Opacity = 1;
             ShowOverlay();
+        }
+
+        private void Border_MouseLeave(object sender, MouseEventArgs e)
+        {
+            overlayRectangle.Opacity = 0;
+            overlayButton.Opacity = 0;
+            HideOverlay();
         }
 
         private void comprar_Click(object sender, RoutedEventArgs e)
         {
-            HideOverlay();
+            comprar();
+        }
+
+        public void comprar()
+        {
+            Producto producto = new Producto();
+            producto.Show();
+            Tienda tienda = new Tienda();
+            tienda.Close();
         }
 
         public void ShowOverlay()
@@ -49,7 +61,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             fadeInAnimation.From = 0;
             fadeInAnimation.To = 1;
             fadeInAnimation.Duration = TimeSpan.FromSeconds(0.5);
-            overlayGrid.Visibility = Visibility.Visible;
+
             overlayGrid.BeginAnimation(Grid.OpacityProperty, fadeInAnimation);
 
             DoubleAnimation buttonFadeInAnimation = new DoubleAnimation();
@@ -75,8 +87,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             buttonFadeOutAnimation.Duration = TimeSpan.FromSeconds(0.5);
 
             overlayGrid.Children.OfType<Button>().FirstOrDefault()?.BeginAnimation(Button.OpacityProperty, buttonFadeOutAnimation);
-
-            overlayGrid.Visibility = Visibility.Hidden;
         }
+
     }
 }

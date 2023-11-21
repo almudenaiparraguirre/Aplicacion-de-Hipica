@@ -64,6 +64,9 @@
     <Compile Include="ProductItem.xaml.cs">
       <DependentUpon>ProductItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Producto.xaml.cs">
+      <DependentUpon>Producto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QuienesSomos.xaml.cs">
       <DependentUpon>QuienesSomos.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProductItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Producto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,7 +160,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\arrowback.png" />
     <Resource Include="images\bolsaBotas.jpg" />
     <Resource Include="images\botas.png" />
     <Resource Include="images\caballo_cabezada.png" />
@@ -190,6 +196,16 @@
     <Resource Include="images\cabezada.jpg" />
     <Resource Include="images\mosquero.jpg" />
     <Resource Include="images\sudadero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\arrowleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\fotoGaleria1.jpg" />
+    <Resource Include="images\fotoGaleria2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\arrowright.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
