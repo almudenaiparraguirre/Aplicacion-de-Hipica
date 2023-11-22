@@ -7,12 +7,11 @@
         mc:Ignorable="d"
         Title="Tienda" Height="450" Width="900"
         MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
-        Background="#EEF0F2">
+        Background="#EEF0F2" WindowStartupLocation="CenterScreen">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -30,50 +29,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Teléfono, correo, instagram, facebook -->
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="15,10,0,0">
-                <Image Grid.Column="0" Source="images/telefono.png" Margin="120,0,0,0" Cursor="Hand"/>
-                <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" 
-                       Text="+34663424110" FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
-                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
-                <Image Source="images/correo2.png" Width="50" Cursor="Hand"/>
-                <TextBlock Grid.Column="1" VerticalAlignment="Center" Text="info@gesthip.com"
-                       FontFamily="Karla" FontWeight="Bold" Cursor="Hand"
-                       MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
-                <Image Grid.Column="2" Source="images/facebook.png" Stretch="Fill" Margin="200,0,0,0" Cursor="Hand"/>
-                <Image Grid.Column="2" Source="images/instagram.png" Stretch="Fill" Margin="5,0,0,0" Cursor="Hand"/>
-            </StackPanel>
-
-            <!-- Menú horizontal superior -->
-            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal" Background="White" HorizontalAlignment="Left" Width="900" Height="50">
-                <StackPanel.Effect>
-                    <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
-                </StackPanel.Effect>
-                <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="mainWindow_click"/>
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click"/>
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseLeftButtonUp="quienesSomos_click"
-                            MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave"/>
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" Foreground="#B71C1C"/>
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="precios_click"/>
-                    <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
-                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="galeriaClick"/>
-                    <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
-                       Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
-                       Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
-                </StackPanel>
-                <ContentControl x:Name="contentControl" />
-            </StackPanel>
+            <local:MenuHorizontalSuperior Grid.Row="0"/>
 
             <!-- Top ofertas -->
             <TextBlock Text="TOP OFERTAS" FontFamily="Karla" FontWeight="Light" Grid.Row="2" Margin="30,20,0,0"

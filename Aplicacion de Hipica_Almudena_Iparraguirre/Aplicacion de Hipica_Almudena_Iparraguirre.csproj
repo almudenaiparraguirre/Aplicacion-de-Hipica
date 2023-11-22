@@ -58,6 +58,12 @@
     <Compile Include="Galeria.xaml.cs">
       <DependentUpon>Galeria.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InicioSesion.xaml.cs">
+      <DependentUpon>InicioSesion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuHorizontalSuperior.xaml.cs">
+      <DependentUpon>MenuHorizontalSuperior.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Precios.xaml.cs">
       <DependentUpon>Precios.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InicioSesion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,6 +99,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MenuHorizontalSuperior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Novedades.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
