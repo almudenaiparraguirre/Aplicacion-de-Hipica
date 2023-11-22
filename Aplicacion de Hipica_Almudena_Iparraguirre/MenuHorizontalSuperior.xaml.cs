@@ -19,56 +19,13 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
     /// <summary>
     /// Lógica de interacción para MenuHorizontalSuperior.xaml
     /// </summary>
-    public partial class MenuHorizontalSuperior : UserControl
-    {
+    public partial class MenuHorizontalSuperior : UserControl {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private string _estadoActual;
-        public string EstadoActual
-        {
-            get { return _estadoActual; }
-            set
-            {
-                if (_estadoActual != value)
-                {
-                    _estadoActual = value;
-                    OnPropertyChanged(nameof(EstadoActual));
-                }
-            }
-        }
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        private SolidColorBrush _textBlockColor = new SolidColorBrush(Colors.Black);
 
         public MenuHorizontalSuperior()
         {
             InitializeComponent();
-            DataContext = this; 
-            ActualizarEstado();
-
-            var mainWindow = Application.Current.MainWindow;
-            if (mainWindow != null)
-            {
-                mainWindow.Activated += WindowActivated;
-            }
-        }
-
-        private void ActualizarEstado()
-        {
-            var ventanaActual = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
-
-            if (ventanaActual != null)
-            {
-                EstadoActual = ventanaActual.GetType().Name == "Inicio" ? "Inicio" : "Otro";
-            }
-        }
-
-        private void WindowActivated(object sender, EventArgs e)
-        {
-            ActualizarEstado();
         }
 
         private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -115,6 +72,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             Novedades novedades = new Novedades();
             Window.GetWindow(this).Close();
             novedades.Show();
+            textBlockNovedades.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
         }
 
         private void imagen_click(object sender, MouseButtonEventArgs e)
@@ -152,10 +110,16 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 
         private void inicio_click(object sender, MouseButtonEventArgs e)
         {
-            EstadoActual = "Inicio";
             MainWindow main = new MainWindow();
             Window.GetWindow(this).Close();
             main.Show();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -49,8 +49,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         {
             Producto producto = new Producto();
             producto.Show();
-            Tienda tienda = new Tienda();
-            tienda.Close();
+            Window.GetWindow(this).Close();
         }
 
         public void ShowOverlay()

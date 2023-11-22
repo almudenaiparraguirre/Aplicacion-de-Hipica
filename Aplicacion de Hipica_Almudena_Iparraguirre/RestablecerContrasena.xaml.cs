@@ -15,13 +15,33 @@ using System.Windows.Shapes;
 namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 {
     /// <summary>
-    /// Lógica de interacción para InicioSesion.xaml
+    /// Lógica de interacción para RestablecerContrasena.xaml
     /// </summary>
-    public partial class InicioSesion : Window
+    public partial class RestablecerContrasena : Window
     {
-        public InicioSesion()
+        public RestablecerContrasena()
         {
             InitializeComponent();
+        }
+
+        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
+            }
+        }
+
+        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+        {
+            TextBlock textBlock = sender as TextBlock;
+
+            if (textBlock != null)
+            {
+                textBlock.Foreground = new SolidColorBrush(Colors.Black);
+            }
         }
 
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
@@ -48,42 +68,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
                     textBox.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#6B6B6B")); // O el color original
                 }
             }
-        }
-
-        // Para obtener el contenido del TextBox
-        private void ObtenerContenido()
-        {
-            string contenidoCorreo = correoTextBox.Text;
-            string contenidoContrasena = contrasenaTextBox.Text;
-
-            // Hacer algo con el contenido...
-        }
-
-        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
-        {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
-            }
-        }
-
-        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
-        {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush(Colors.Black);
-            }
-        }
-
-        private void restablecerContrasena(object sender, MouseButtonEventArgs e)
-        {
-            RestablecerContrasena restablecerContrasena = new RestablecerContrasena();
-            this.Close();
-            restablecerContrasena.Show();
         }
     }
 }

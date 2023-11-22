@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AplicacionDeHipicaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AplicacionDeHipicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datosHipicaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +85,9 @@
     </Compile>
     <Compile Include="QuienesSomos.xaml.cs">
       <DependentUpon>QuienesSomos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RestablecerContrasena.xaml.cs">
+      <DependentUpon>RestablecerContrasena.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tienda.xaml.cs">
       <DependentUpon>Tienda.xaml</DependentUpon>
@@ -128,6 +136,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RestablecerContrasena.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Tienda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +182,17 @@
     <Resource Include="Karla\static\Karla-Regular.ttf" />
     <Resource Include="Karla\static\Karla-SemiBold.ttf" />
     <Resource Include="Karla\static\Karla-SemiBoldItalic.ttf" />
+    <None Include="AplicacionDeHipicaDataSet.xsc">
+      <DependentUpon>AplicacionDeHipicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AplicacionDeHipicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AplicacionDeHipicaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AplicacionDeHipicaDataSet.xss">
+      <DependentUpon>AplicacionDeHipicaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="datosHipicaDataSet.xsc">
       <DependentUpon>datosHipicaDataSet.xsd</DependentUpon>
     </None>

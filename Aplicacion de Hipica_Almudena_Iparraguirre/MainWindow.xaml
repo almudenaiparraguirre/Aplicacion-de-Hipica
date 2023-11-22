@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="900"
         MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
-        Background="#EEF0F2">
+        Background="#EEF0F2" WindowStartupLocation="CenterScreen">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>

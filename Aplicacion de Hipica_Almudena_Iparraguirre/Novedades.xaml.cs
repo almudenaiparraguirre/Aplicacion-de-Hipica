@@ -19,10 +19,18 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
     /// </summary>
     public partial class Novedades : Window
     {
+
         public Novedades()
         {
             InitializeComponent();
         }
+
+        /*public Novedades(MenuHorizontalSuperior menu)
+        {
+            InitializeComponent();
+            this.menu = menu;
+            DataContext = menu;
+        }*/
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
         {

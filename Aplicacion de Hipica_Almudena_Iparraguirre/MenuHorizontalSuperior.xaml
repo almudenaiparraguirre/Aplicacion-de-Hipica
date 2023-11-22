@@ -49,21 +49,10 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="inicio_click">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Setter Property="Foreground" Value="Black"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding EstadoActual}" Value="Inicio">
-                                    <Setter Property="Foreground" Value="Red"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="inicio_click"/>
+                <TextBlock x:Name="textBlockNovedades" VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click"/>
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click" Foreground="{Binding TextBlockColor}"/>
                 <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="quienesSomosClick"/>

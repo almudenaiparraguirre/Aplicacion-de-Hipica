@@ -57,9 +57,9 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 
         private void novedades_click(object sender, MouseButtonEventArgs e)
         {
-            Novedades novedades = new Novedades();
+            /*Novedades novedades = new Novedades();
             this.Close();
-            novedades.Show();
+            novedades.Show();*/
         }
 
         private void quienesSomosClick(object sender, MouseButtonEventArgs e)

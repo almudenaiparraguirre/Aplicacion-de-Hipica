@@ -7,37 +7,58 @@
         mc:Ignorable="d"
         Title="InicioSesion" Height="450" Width="900"
         MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
-        Background="#EEF0F2">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
+        Background="#EEF0F2" WindowStartupLocation="CenterScreen">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.Resources>
+                <CornerRadius x:Key="ControlCornerRadius">8</CornerRadius>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-        <local:MenuHorizontalSuperior Grid.Row="0"/>
+            <local:MenuHorizontalSuperior Grid.Row="0"/>
 
-        <TextBlock Text="INICIA SESIÓN" FontFamily="Karla" FontWeight="Bold" Margin="0,35,0,0"
+            <TextBlock Text="INICIA SESIÓN" FontFamily="Karla" FontWeight="Bold" Margin="0,35,0,0"
                        TextAlignment="Center" FontSize="30" Grid.Row="2"/>
 
-        <Image Source="images/logotipocaballo_167x167.png" Grid.Row="3" Width="120" Margin="0,20,0,0"/>
 
-        <TextBox Grid.Row="4" Width="350" Height="40" FontFamily="Karla" VerticalContentAlignment="Center"
-                 Margin="0,30,0,0" Foreground="#6B6B6B" BorderBrush="Black">Correo Electrónico</TextBox>
+            <StackPanel Grid.Row="3">
+                <Image Source="images/logotipocaballo_167x167.png" Width="80" Margin="0,20,0,0"/>
+                <StackPanel.Effect>
+                    <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.6" BlurRadius="5" Color="Black"/>
+                </StackPanel.Effect>
+            </StackPanel>
 
-        <TextBox Grid.Row="5" Width="350" Height="40" FontFamily="Karla" VerticalContentAlignment="Center"
-                 Margin="0,10,0,0" Foreground="#6B6B6B" BorderBrush="Black">Contraseña</TextBox>
-    </Grid>
+            <Border Grid.Row="4" Width="350" Height="35" Margin="0,20,0,0" Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                <TextBox x:Name="correoTextBox" Width="340" Height="25" FontFamily="Karla" VerticalContentAlignment="Center" Foreground="#6B6B6B"
+             GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" BorderBrush="Transparent">Correo Electrónico</TextBox>
+            </Border>
+
+            <Border Grid.Row="5" Width="350" Height="35" Margin="0,10,0,0" Background="White" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                <TextBox x:Name="contrasenaTextBox" Width="340" Height="25" FontFamily="Karla" VerticalContentAlignment="Center" Foreground="#6B6B6B"
+                GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" BorderBrush="Transparent">Contraseña</TextBox>
+            </Border>
+
+            <Button Grid.Row="6" Width="150" Height="30" Margin="0,25,0,0" Background="White" Cursor="Hand">Iniciar sesión</Button>
+            <TextBlock Text="¿Has olvidado la contraseña?" FontFamily="Karla" Grid.Row="7" HorizontalAlignment="Center"
+                       Margin="0,25,0,20" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" Cursor="Hand"
+                       MouseLeftButtonUp="restablecerContrasena"/>
+
+        </Grid>
+    </ScrollViewer>
 </Window>

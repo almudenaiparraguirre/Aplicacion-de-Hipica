@@ -33,5 +33,16 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre.Properties {
                 return ((string)(this["datosHipicaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ASSUS-ALLO\\SQLEXPRESS;Initial Catalog=AplicacionDeHipica;Integrated S" +
+            "ecurity=True")]
+        public string AplicacionDeHipicaConnectionString {
+            get {
+                return ((string)(this["AplicacionDeHipicaConnectionString"]));
+            }
+        }
     }
 }
