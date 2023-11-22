@@ -1,0 +1,60 @@
+﻿<Window x:Class="Aplicacion_de_Hipica_Almudena_Iparraguirre.Calendario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplicacion_de_Hipica_Almudena_Iparraguirre"
+        mc:Ignorable="d"
+        Title="Calendario" Height="450" Width="900"
+        MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
+        Background="#EEF0F2" WindowStartupLocation="CenterScreen">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <local:MenuHorizontalSuperior Grid.Row="0"/>
+
+            <Viewbox Width="900" Height="800" Margin="0,20,0,0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Calendar Name="calendario" SelectionMode="SingleDate" Width="400" Height="400">
+                    <Calendar.Resources>
+                        <!-- Estilo para los días de la semana -->
+                        <Style TargetType="{x:Type CalendarDayButton}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type CalendarDayButton}">
+                                        <Border x:Name="b" BorderBrush="Black" BorderThickness="1" Background="{TemplateBinding Background}">
+                                            <TextBlock x:Name="tb" Text="{TemplateBinding Content}" Foreground="Black"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <!-- Cambiar el color de fondo al pasar el ratón -->
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="b" Property="Background" Value="#B71C1C"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Calendar.Resources>
+                </Calendar>
+            </Viewbox>
+        </Grid>
+    </ScrollViewer>
+</Window>

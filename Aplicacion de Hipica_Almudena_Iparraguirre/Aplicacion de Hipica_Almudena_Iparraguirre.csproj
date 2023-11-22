@@ -60,10 +60,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AplicacionDeHipicaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Calendario.xaml.cs">
+      <DependentUpon>Calendario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="datosHipicaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>datosHipicaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FichaAlumno.xaml.cs">
+      <DependentUpon>FichaAlumno.xaml</DependentUpon>
     </Compile>
     <Compile Include="Galeria.xaml.cs">
       <DependentUpon>Galeria.xaml</DependentUpon>
@@ -92,6 +98,15 @@
     <Compile Include="Tienda.xaml.cs">
       <DependentUpon>Tienda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Usuario.cs" />
+    <Page Include="Calendario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FichaAlumno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Galeria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
