@@ -105,6 +105,9 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             //loginPopup.IsOpen = true;
+            InicioSesion inicioSesion = new InicioSesion();
+            Window.GetWindow(this).Close();
+            inicioSesion.Show();
         }
 
         private void novedades_click(object sender, MouseButtonEventArgs e)

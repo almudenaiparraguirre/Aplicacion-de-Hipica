@@ -55,6 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="datosHipicaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datosHipicaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Galeria.xaml.cs">
       <DependentUpon>Galeria.xaml</DependentUpon>
     </Compile>
@@ -165,6 +170,17 @@
     <Resource Include="Karla\static\Karla-Regular.ttf" />
     <Resource Include="Karla\static\Karla-SemiBold.ttf" />
     <Resource Include="Karla\static\Karla-SemiBoldItalic.ttf" />
+    <None Include="datosHipicaDataSet.xsc">
+      <DependentUpon>datosHipicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="datosHipicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datosHipicaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="datosHipicaDataSet.xss">
+      <DependentUpon>datosHipicaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -220,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\arrowright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logotipocaballo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
