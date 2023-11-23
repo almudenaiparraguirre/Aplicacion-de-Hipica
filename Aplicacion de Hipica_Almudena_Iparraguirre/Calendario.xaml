@@ -55,6 +55,8 @@
                     </Calendar.Resources>
                 </Calendar>
             </Viewbox>
+
+            <Button Grid.Row="3" Width="150" Height="40" Content="Apuntarme a una clase" Cursor="Hand"/>
         </Grid>
     </ScrollViewer>
 </Window>

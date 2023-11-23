@@ -1,27 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 {
-    /// <summary>
-    /// Lógica de interacción para Producto.xaml
-    /// </summary>
-    public partial class Producto : Window
+    public class ProductoViewModel : INotifyPropertyChanged
     {
-
         private string _nombre;
+        private string _imagen;
+        private decimal _precio;
+        private string _descripcion;
+
         public string Nombre
         {
             get { return _nombre; }
@@ -35,7 +28,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
-        private string _imagen;
         public string Imagen
         {
             get { return _imagen; }
@@ -49,7 +41,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
-        private decimal _precio;
         public decimal Precio
         {
             get { return _precio; }
@@ -63,7 +54,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
-        private string _descripcion;
         public string Descripcion
         {
             get { return _descripcion; }
@@ -82,38 +72,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public Producto()
-        {
-            InitializeComponent();
-        }
-
-        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            TextBlock textBlock = (TextBlock)sender;
-
-            if (textBlock != null)
-            {
-                Clipboard.SetText(textBlock.Text);
-                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
-            }
-        }
-
-        private void volverTienda_click(object sender, MouseButtonEventArgs e)
-        {
-            Tienda tienda = new Tienda();
-            this.Close();
-            tienda.Show();
-        }
-
-        private void ImagenPequeña_Click(object sender, MouseButtonEventArgs e)
-        {
-            if (sender is Image imagenPequeña)
-            {
-                // Cambiar la imagen grande al origen de la imagen pequeña clicada
-                ImagenGrande.Source = imagenPequeña.Source;
-            }
         }
     }
 }

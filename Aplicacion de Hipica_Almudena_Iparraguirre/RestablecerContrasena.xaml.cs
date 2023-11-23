@@ -69,5 +69,12 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
                 }
             }
         }
+
+        private void volverInicioSesion(object sender, MouseButtonEventArgs e)
+        {
+            InicioSesion inicioSesion = new InicioSesion();
+            this.Close();
+            inicioSesion.Show();
+        }
     }
 }

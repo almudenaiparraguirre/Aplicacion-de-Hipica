@@ -6,14 +6,20 @@
              xmlns:local="clr-namespace:Aplicacion_de_Hipica_Almudena_Iparraguirre"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <local:LoginViewModel/>
+    </UserControl.DataContext>
+
     <Border x:Name="border" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave">
         <!-- Contenido del producto -->
 
         <Grid x:Name="overlayGrid" Background="Transparent">
             <Rectangle x:Name="overlayRectangle" Fill="White" Opacity="0"/>
             <Button Content="Comprar" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                        Background="#B71C1C" Foreground="White" FontFamily="Karla" Click="comprar_Click" 
-                        Padding="10,5,10,5" x:Name="overlayButton" Opacity="0" Cursor="Hand"/>
+                    Background="#B71C1C" Foreground="White" FontFamily="Karla" Click="comprar_Click" 
+                    Padding="10,5,10,5" x:Name="overlayButton" Opacity="0" Cursor="Hand"/>
+
+            <Image Source="{Binding LoginImage}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </Border>
 </UserControl>

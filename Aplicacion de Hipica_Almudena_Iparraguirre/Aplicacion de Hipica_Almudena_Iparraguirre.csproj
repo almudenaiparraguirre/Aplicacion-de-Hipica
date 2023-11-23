@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -77,6 +78,7 @@
     <Compile Include="InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoginViewModel.cs" />
     <Compile Include="MenuHorizontalSuperior.xaml.cs">
       <DependentUpon>MenuHorizontalSuperior.xaml</DependentUpon>
     </Compile>
@@ -89,6 +91,7 @@
     <Compile Include="Producto.xaml.cs">
       <DependentUpon>Producto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProductoViewModel.cs" />
     <Compile Include="QuienesSomos.xaml.cs">
       <DependentUpon>QuienesSomos.xaml</DependentUpon>
     </Compile>
@@ -277,6 +280,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\logotipocaballo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\arrow-left.svg" />
+    <Resource Include="images\me-gusta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

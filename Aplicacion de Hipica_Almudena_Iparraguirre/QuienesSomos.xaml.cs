@@ -56,13 +56,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
-        private void mainWindow_click(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow mainWindow = new MainWindow();
-            this.Close();
-            mainWindow.Show();
-        }
-
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
@@ -71,34 +64,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         private void Contactar_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://gesthip.com/contacto/");
-        }
-
-        private void novedades_click(object sender, MouseButtonEventArgs e)
-        {
-            /*Novedades novedades = new Novedades();
-            this.Close();
-            novedades.Show();*/
-        }
-
-        private void tienda_click(object sender, MouseButtonEventArgs e)
-        {
-            Tienda tienda = new Tienda();
-            this.Close();
-            tienda.Show();
-        }
-
-        private void precios_click(object sender, MouseButtonEventArgs e)
-        {
-            Precios precios = new Precios();
-            this.Close();
-            precios.Show();
-        }
-
-        private void galeriaClick(object sender, MouseButtonEventArgs e)
-        {
-            Galeria galeria = new Galeria();
-            this.Close();
-            galeria.Show();
         }
     }
 }

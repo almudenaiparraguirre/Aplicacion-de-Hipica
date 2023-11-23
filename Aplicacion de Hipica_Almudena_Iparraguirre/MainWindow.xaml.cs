@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,49 +57,31 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             }
         }
 
-        private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            loginPopup.IsOpen = true;
+            if (AppState.IsLoggedIn)
+            {
+                miniMenu.Visibility = Visibility.Visible;
+            }
         }
 
-        private void novedades_click(object sender, MouseButtonEventArgs e)
+        private void Calendario_Click(object sender, RoutedEventArgs e)
         {
-            /*Novedades novedades = new Novedades();
+            Calendario calendario = new Calendario();
             this.Close();
-            novedades.Show();*/
+            calendario.Show();
         }
 
-        private void imagen_click(object sender, MouseButtonEventArgs e)
+        private void FichaAlumno_Click(object sender, RoutedEventArgs e)
         {
-            loginPopup.IsOpen = true;
-        }
-
-        private void quienesSomosClick(object sender, MouseButtonEventArgs e)
-        {
-            QuienesSomos quienesSomos = new QuienesSomos();
+            FichaAlumno ficha = new FichaAlumno();
             this.Close();
-            quienesSomos.Show();
+            ficha.Show();
         }
 
-        private void tienda_click(object sender, MouseButtonEventArgs e)
+        private void videoYoutube(object sender, MouseButtonEventArgs e)
         {
-            Tienda tienda = new Tienda();
-            this.Close();
-            tienda.Show();
-        }
-
-        private void precios_click(object sender, MouseButtonEventArgs e)
-        {
-            Precios precios = new Precios();
-            this.Close();
-            precios.Show();
-        }
-
-        private void galeria_click(object sender, MouseButtonEventArgs e)
-        {
-            Galeria galeria = new Galeria();
-            this.Close();
-            galeria.Show();
+            Process.Start("https://www.youtube.com/watch?time_continue=1&v=aTAVOGEjLxE&embeds_referring_euri=https%3A%2F%2Fgesthip.com%2F&source_ve_path=Mjg2NjY&feature=emb_logo");
         }
     }
 }

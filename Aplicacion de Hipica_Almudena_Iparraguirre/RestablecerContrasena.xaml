@@ -42,9 +42,10 @@
                         <TextBox x:Name="correoTextBox" Width="340" Height="25" FontFamily="Karla" VerticalContentAlignment="Center" Foreground="#6B6B6B"
                              GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" BorderBrush="Transparent">Correo Electrónico</TextBox>
                          </Border>
-                        <Button Grid.Row="6" Width="140" Height="25" Margin="0,25,0,0" Background="White" Cursor="Hand">Iniciar sesión</Button>
-                        <TextBlock Text="¿Has olvidado la contraseña?" FontFamily="Karla" Grid.Row="7" HorizontalAlignment="Center"
-                           Margin="0,25,0,20" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" Cursor="Hand"/>
+                        <Button Grid.Row="6" Width="140" Height="25" Margin="0,25,0,0" Background="White" Cursor="Hand">Resetear contraseña</Button>
+                        <TextBlock Text="Volver al inicio de sesión" FontFamily="Karla" Grid.Row="7" HorizontalAlignment="Center"
+                           Margin="0,25,0,20" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" Cursor="Hand"
+                                   MouseLeftButtonUp="volverInicioSesion"/>
                     </StackPanel>
                 </TextBlock>
             </Border>

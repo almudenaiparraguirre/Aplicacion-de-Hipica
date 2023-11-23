@@ -54,7 +54,8 @@
                 GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" BorderBrush="Transparent">Contraseña</TextBox>
             </Border>
 
-            <Button Grid.Row="6" Width="150" Height="30" Margin="0,25,0,0" Background="White" Cursor="Hand">Iniciar sesión</Button>
+            <Button Grid.Row="6" Width="150" Height="30" Margin="0,25,0,0" Background="White" Cursor="Hand"
+                    Click="Button_Click">Iniciar sesión</Button>
             <TextBlock Text="¿Has olvidado la contraseña?" FontFamily="Karla" Grid.Row="7" HorizontalAlignment="Center"
                        Margin="0,25,0,20" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" Cursor="Hand"
                        MouseLeftButtonUp="restablecerContrasena"/>

@@ -13,13 +13,13 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
     /// </summary>
     public partial class App : Application
     {
-        public static Usuario UsuarioActual { get; set; }
+        public static Usuario CurrentUser { get; set; }
 
-        // Método para cargar la información del usuario desde la base de datos al iniciar sesión
-        public static void IniciarSesion(int usuarioId)
+        protected override void OnStartup(StartupEventArgs e)
         {
-            // Lógica para cargar información del usuario desde la base de datos
-            //UsuarioActual = ObtenerUsuarioDesdeBaseDeDatos(usuarioId);
+            base.OnStartup(e);
+            CurrentUser = new Usuario(); 
         }
+
     }
 }

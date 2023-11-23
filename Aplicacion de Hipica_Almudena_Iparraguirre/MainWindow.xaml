@@ -29,8 +29,23 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Teléfono, correo, instagram, facebook -->
+            <!-- Teléfono, correo, instagram, facebook y menú horizontal-->
             <local:MenuHorizontalSuperior Grid.Row="0"/>
+
+            <StackPanel x:Name="miniMenu" Orientation="Horizontal" Grid.Row="2" Margin="20,30,0,0" HorizontalAlignment="Left" Visibility="Collapsed">
+                <Button Content="Calendario" Margin="5" Click="Calendario_Click"/>
+                <Button Content="Ficha del Alumno" Margin="5" Click="FichaAlumno_Click"/>
+            </StackPanel>
+
+            <!-- Popup para el mini menú -->
+            <Popup x:Name="miniMenuPopup" Placement="Bottom" StaysOpen="False" IsOpen="False" Grid.Row="2">
+                <Border Background="White" BorderBrush="#B71C1C" BorderThickness="1" CornerRadius="5">
+                    <StackPanel Margin="5">
+                        <Button Content="Calendario" Background="#B71C1C" Foreground="White" Padding="5" Margin="0,0,0,5" Click="Calendario_Click"/>
+                        <Button Content="Ficha del Alumno" Background="#B71C1C" Foreground="White" Padding="5" Click="FichaAlumno_Click"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
 
             <!-- Contenido página principal -->
             <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="20,30,0,0" HorizontalAlignment="Left">
@@ -44,7 +59,8 @@
                     <StackPanel.Effect>
                         <DropShadowEffect ShadowDepth="3" Direction="270" Opacity="0.5" BlurRadius="5" Color="Black"/>
                     </StackPanel.Effect>
-                    <Image Source="images/video_gesthip.png" Margin="45,0,0,0" MaxHeight="180" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="imagen_click"/>
+                    <Image Source="images/video_gesthip.png" Margin="45,0,0,0" MaxHeight="180"
+                           RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="videoYoutube" Cursor="Hand"/>
                 </StackPanel>
             </StackPanel>
 

@@ -67,24 +67,32 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             inicioSesion.Show();
         }
 
-        private void novedades_click(object sender, MouseButtonEventArgs e)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            Novedades novedades = new Novedades();
-            Window.GetWindow(this).Close();
-            novedades.Show();
-            textBlockNovedades.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private void imagen_click(object sender, MouseButtonEventArgs e)
+        private void inicio_click(object sender, MouseButtonEventArgs e)
         {
-            //loginPopup.IsOpen = true;
+            MainWindow main = new MainWindow();
+            Window.GetWindow(this).Close();
+            main.Show();
+        }
+
+        private void novedades_click(object sender, MouseButtonEventArgs e)
+        {
+            Novedades main = new Novedades();
+            Window.GetWindow(this).Close();
+            main.Show();
         }
 
         private void quienesSomosClick(object sender, MouseButtonEventArgs e)
         {
-            QuienesSomos quienesSomos = new QuienesSomos();
+            QuienesSomos main = new QuienesSomos();
             Window.GetWindow(this).Close();
-            quienesSomos.Show();
+            main.Show();
         }
 
         private void tienda_click(object sender, MouseButtonEventArgs e)
@@ -106,20 +114,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             Galeria galeria = new Galeria();
             Window.GetWindow(this).Close();
             galeria.Show();
-        }
-
-        private void inicio_click(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow main = new MainWindow();
-            Window.GetWindow(this).Close();
-            main.Show();
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

@@ -26,10 +26,53 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <local:MenuHorizontalSuperior Grid.Row="0"/>
+
+            <Image Source="images/arrowleft.png" Grid.Row="1" Margin="10,20,1369,0" Cursor="Hand"
+                   HorizontalAlignment="Center" Width="25" MouseLeftButtonUp="volverTienda_click"/>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Width="Auto" Margin="0,0,544,0">
+                <StackPanel Orientation="Vertical" Margin="20,15,0,0">
+                    <Image Source="images/caballo_cabezada.png" Width="100" MouseLeftButtonDown="ImagenPequeña_Click" Cursor="Hand"/>
+                    <Image Source="images/cabezada.jpg" Width="100" Margin="0,20" MouseLeftButtonDown="ImagenPequeña_Click" Cursor="Hand"/>
+                </StackPanel>
+                <Image x:Name="ImagenGrande" Source="images/caballo_cabezada.png" Width="200" Margin="20,-41,20,20" Cursor="Hand"/>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Cabezada de Cuadra LeMieux Vogue" Margin="50,0,0,0"
+                               FontSize="35" FontFamily="Karla" FontWeight="Bold" TextWrapping="Wrap"
+                               Width="450" TextAlignment="Center"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock Text="37.08 €" Margin="0,20,0,0" FontFamily="Karla" Foreground="#B71C1C"
+                                   FontSize="35" FontWeight="Medium"/>
+                        <TextBlock Text="PVP: " Margin="10,20,0,0" FontFamily="Karla"
+                                   FontSize="35" FontWeight="Medium"/>
+                        <TextBlock Text="47.08 €" Margin="0,20,0,0" FontFamily="Karla"
+                                   FontSize="35" FontWeight="Medium" TextDecorations="Strikethrough"/>
+                    </StackPanel>
+                    <TextBlock Text="Precio incluye I.V.A.   sin gastos de envío" TextAlignment="Center"
+                               Margin="0,15,0,0" Foreground="#BCBCBC"/>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button x:Name="anadirCarro" Content="Añadir al carro" Width="150" Margin="0,20,0,0" 
+                            Height="25" Background="Black" Foreground="White" VerticalAlignment="Center"
+                                Cursor="Hand"></Button>
+                        <Image Source="images/me-gusta.png" Width="20" VerticalAlignment="Bottom" Margin="20,0,0,0"
+                               Cursor="Hand"/>
+                    </StackPanel>
+                    <TextBlock Text="Descripción del producto" Margin="20,20,0,0" FontFamily="Karla" FontWeight="DemiBold"
+                               FontSize="18"/>
+                    <TextBlock Text="- Montantes revestidos con polar" Margin="20,20,0,0" FontFamily="Karla"/>
+                    <TextBlock Text="- Multi-ajustable en la muserola y testera (ajustable de los dos lados)" Margin="20,20,0,0" FontFamily="Karla"/>
+                    <TextBlock Text="- Ahora con hebillas y enganches sólidos de níquel" Margin="20,20,0,0" FontFamily="Karla"/>
+                    <TextBlock Text="- Cada cabezada de cuadra viene con un ramal que conjunta" Margin="20,20,0,0" FontFamily="Karla"/>
+                </StackPanel>
+            </StackPanel>
+            <!-- Política de privacidad -->
+            <StackPanel Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,485,0" Width="919">
+                <TextBlock Text="Aviso Legal | Política de Privacidad | Política de Redes Sociales | Política de Cookies" TextAlignment="Center"/>
+                <TextBlock Text="GESTHIP® - Copyright - 2022" TextAlignment="Center" Margin="0,5,0,0"/>
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </Window>

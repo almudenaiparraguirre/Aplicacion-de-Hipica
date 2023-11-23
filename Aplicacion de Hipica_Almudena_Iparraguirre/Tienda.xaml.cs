@@ -23,58 +23,22 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         public Tienda()
         {
             InitializeComponent();
+
         }
 
-        private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
+            if (sender is FrameworkElement element && element.DataContext is Producto producto)
             {
-                textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#B71C1C"));
+                MostrarDetallesProducto(producto);
             }
         }
 
-        private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
+        private void MostrarDetallesProducto(Producto producto)
         {
-            TextBlock textBlock = sender as TextBlock;
-
-            if (textBlock != null)
-            {
-                textBlock.Foreground = new SolidColorBrush(Colors.Black);
-            }
-        }
-
-        private void mainWindow_click(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow main = new MainWindow();
-            this.Close();
-            main.Show();
-        }
-
-        private void novedades_click(object sender, MouseButtonEventArgs e)
-        {
-            /*Novedades novedades = new Novedades();
-            this.Close();
-            novedades.Show();*/
-        }
-
-        private void quienesSomos_click(object sender, MouseButtonEventArgs e)
-        {
-            QuienesSomos quienesSomos = new QuienesSomos();
-            this.Close();
-            quienesSomos.Show();
-        }
-
-        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            TextBlock textBlock = (TextBlock)sender;
-
-            if (textBlock != null)
-            {
-                Clipboard.SetText(textBlock.Text);
-                MessageBox.Show("Texto copiado al portapapeles: " + textBlock.Text);
-            }
+            Producto ventanaProducto = new Producto();
+            ventanaProducto.DataContext = producto;
+            ventanaProducto.Show();
         }
 
         private void Image_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -96,24 +60,6 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             {
                 productItem.HideOverlay();
             }
-        }
-
-        private void comprar_Click(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void precios_click(object sender, MouseButtonEventArgs e)
-        {
-            Precios precios = new Precios();
-            this.Close();
-            precios.Show();
-        }
-
-        private void galeriaClick(object sender, MouseButtonEventArgs e)
-        {
-            Galeria galeria = new Galeria();
-            this.Close();
-            galeria.Show();
         }
     }
 }

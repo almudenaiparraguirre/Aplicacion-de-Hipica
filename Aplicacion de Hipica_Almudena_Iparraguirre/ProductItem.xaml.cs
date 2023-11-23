@@ -24,6 +24,8 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
         public ProductItem()
         {
             InitializeComponent();
+            LoginViewModel viewModel = new LoginViewModel();
+            DataContext = viewModel;
         }
 
         private void Border_MouseEnter(object sender, MouseEventArgs e)
