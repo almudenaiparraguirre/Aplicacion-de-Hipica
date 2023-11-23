@@ -47,24 +47,30 @@
             </StackPanel.Effect>
             <Image VerticalAlignment="Center" Source="images/logo.png" Stretch="Fill" HorizontalAlignment="Left" MaxHeight="25" Margin="20,0,0,0" Cursor="Hand"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Inicio"
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Inicio"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="inicio_click"/>
-                <TextBlock x:Name="textBlockNovedades" VerticalAlignment="Center" Margin="50,0,0,0" Text="Novedades"
+                <TextBlock x:Name="textBlockNovedades" VerticalAlignment="Center" Margin="30,0,0,0" Text="Novedades"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="novedades_click" Foreground="{Binding TextBlockColor}"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="¿Quiénes somos?"
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="¿Quiénes somos?"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="quienesSomosClick"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Tienda"
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Tienda"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="tienda_click"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Precios"
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Precios"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
                            MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="precios_click"/>
-                <TextBlock VerticalAlignment="Center" Margin="50,0,0,0" Text="Galería"
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Galería"
                        FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
-                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="galeria_click">
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="galeria_click"/>
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Calendario"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="calendario_click"/>
+                <TextBlock VerticalAlignment="Center" Margin="30,0,0,0" Text="Ficha"
+                       FontFamily="Karla" FontWeight="SemiBold" Cursor="Hand" MouseEnter="TextBlock_MouseEnter"
+                           MouseLeave="TextBlock_MouseLeave" MouseLeftButtonUp="fichaAlumno_click">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock">
                             <Setter Property="Foreground" Value="Black"/>
@@ -78,7 +84,7 @@
                 </TextBlock>
                 <Image VerticalAlignment="Center" Source="images/material-symbols_person.png" 
                        Stretch="Fill" HorizontalAlignment="Right" MouseLeftButtonUp="Image_MouseLeftButtonUp"
-                       Cursor="Hand" MaxHeight="25" Margin="100,0,0,0"/>
+                       Cursor="Hand" MaxHeight="25" Margin="80,0,0,0"/>
             </StackPanel>
         </StackPanel>
     </Grid>

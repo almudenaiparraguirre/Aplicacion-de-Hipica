@@ -115,5 +115,24 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             Window.GetWindow(this).Close();
             galeria.Show();
         }
+
+        private void calendario_click(object sender, MouseButtonEventArgs e)
+        {
+            Calendario calendario = new Calendario();
+            Window.GetWindow(this).Close();
+            calendario.Show();
+        }
+
+        private void fichaAlumno_click(object sender, MouseButtonEventArgs e)
+        {
+            FichaAlumno ficha = new FichaAlumno();
+            Window.GetWindow(this).Close();
+            ficha.Show();
+        }
+
+        private void cerrarSesion_click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@
             <!-- Teléfono, correo, instagram, facebook y menú horizontal-->
             <local:MenuHorizontalSuperior Grid.Row="0"/>
 
+            <Image x:Name="loginImage"/>
             <StackPanel x:Name="miniMenu" Orientation="Horizontal" Grid.Row="2" Margin="20,30,0,0" HorizontalAlignment="Left" Visibility="Collapsed">
                 <Button Content="Calendario" Margin="5" Click="Calendario_Click"/>
                 <Button Content="Ficha del Alumno" Margin="5" Click="FichaAlumno_Click"/>

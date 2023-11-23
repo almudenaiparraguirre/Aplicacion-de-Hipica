@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +21,25 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
     /// </summary>
     public partial class RestablecerContrasena : Window
     {
+        SqlConnection miConexionSql;
         public RestablecerContrasena()
         {
             InitializeComponent();
+            try
+            {
+                string miConexion = ConfigurationManager.ConnectionStrings["Aplicacion_de_Hipica_Almudena_Iparraguirre.Properties.Settings.AplicacionDeHipicaConnectionString"].ConnectionString;
+
+                if (miConexion == null)
+                {
+                    throw new ArgumentNullException("La cadena de conexión es nula.");
+                }
+
+                miConexionSql = new SqlConnection(miConexion);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al inicializar la conexión: {ex.Message}");
+            }
         }
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
@@ -75,6 +93,58 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
             InicioSesion inicioSesion = new InicioSesion();
             this.Close();
             inicioSesion.Show();
+        }
+
+        private bool VerificarUsuario()
+        {
+            try
+            {
+                miConexionSql.Open();
+
+                string usuario = correoTextBox.Text;
+
+                // Consulta SQL para verificar si el usuario existe
+                string consulta = "SELECT COUNT(*) FROM datosHipica WHERE usuario = @usuario";
+
+                using (SqlCommand cmd = new SqlCommand(consulta, miConexionSql))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        // Usuario existe
+                        return true;
+                    }
+                    else
+                    {
+                        // Usuario no existe
+                        MessageBox.Show("No se encontró ningún usuario con la dirección de correo electrónico proporcionada.");
+                        return false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el usuario: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                miConexionSql.Close();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (VerificarUsuario())
+            {
+                MessageBox.Show("Se ha enviado un enlace para restablecer la contraseña al correo electrónico proporcionado.");
+                InicioSesion inicioSesion = new InicioSesion();
+                this.Close();
+                inicioSesion.Show();
+            }
         }
     }
 }

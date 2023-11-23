@@ -6,19 +6,11 @@
         xmlns:local="clr-namespace:Aplicacion_de_Hipica_Almudena_Iparraguirre"
         mc:Ignorable="d"
         Title="Calendario" Height="450" Width="900"
-        MinHeight="450" MinWidth="900" MaxHeight="450" MaxWidth="900"
+        MinHeight="450" MinWidth="900" MaxHeight="900" MaxWidth="900"
         Background="#EEF0F2" WindowStartupLocation="CenterScreen">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -31,15 +23,15 @@
 
             <local:MenuHorizontalSuperior Grid.Row="0"/>
 
-            <Viewbox Width="900" Height="800" Margin="0,20,0,0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Calendar Name="calendario" SelectionMode="SingleDate" Width="400" Height="400">
+            <Viewbox Width="900" Height="500" Margin="0,20,0,0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Calendar HorizontalAlignment="Center" HorizontalContentAlignment="Center" Name="calendario" SelectionMode="SingleDate"  Height="221">
+                    <!-- Estilos para días de la semana -->
                     <Calendar.Resources>
-                        <!-- Estilo para los días de la semana -->
                         <Style TargetType="{x:Type CalendarDayButton}">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type CalendarDayButton}">
-                                        <Border x:Name="b" BorderBrush="Black" BorderThickness="1" Background="{TemplateBinding Background}">
+                                        <Border x:Name="b" BorderBrush="Black" BorderThickness="1" Background="White">
                                             <TextBlock x:Name="tb" Text="{TemplateBinding Content}" Foreground="Black"/>
                                         </Border>
                                         <ControlTemplate.Triggers>
@@ -53,10 +45,19 @@
                             </Setter>
                         </Style>
                     </Calendar.Resources>
+                    <Calendar.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-0.433"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-0.291"/>
+                        </TransformGroup>
+                    </Calendar.RenderTransform>
                 </Calendar>
             </Viewbox>
 
-            <Button Grid.Row="3" Width="150" Height="40" Content="Apuntarme a una clase" Cursor="Hand"/>
+            <Button Grid.Row="1" Grid.Column="0" Width="150" Height="40" Content="Apuntarme a una clase" 
+                    Cursor="Hand" Margin="0,421,0,59" HorizontalAlignment="Center" Background="White"/>
         </Grid>
     </ScrollViewer>
 </Window>

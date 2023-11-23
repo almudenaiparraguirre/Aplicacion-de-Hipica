@@ -146,10 +146,10 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
                     if (count > 0)
                     {
                         // Credenciales válidas
-                        return true;
                         MainWindow mainWindow = new MainWindow();
                         this.Close();
                         mainWindow.Show();
+                        return true;
                     }
                     else
                     {

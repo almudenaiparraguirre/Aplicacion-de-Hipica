@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -16,15 +17,45 @@ using System.Windows.Shapes;
 
 namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
 {
-    /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private LoginViewModel loginViewModel;
         public MainWindow()
         {
             InitializeComponent();
+            loginViewModel = new LoginViewModel();
+
+            // Establece el DataContext para que los enlaces funcionen
+            this.DataContext = loginViewModel;
+
+            // Maneja el cambio en la propiedad IsLoggedIn
+            loginViewModel.PropertyChanged += LoginViewModel_PropertyChanged;
         }
+
+        private void LoginViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            // Maneja el cambio en la propiedad IsLoggedIn
+            if (e.PropertyName == nameof(loginViewModel.IsLoggedIn))
+            {
+                // Actualiza la interfaz según el estado de inicio de sesión
+                ActualizarInterfaz();
+            }
+        }
+
+        private void ActualizarInterfaz()
+        {
+            if (loginViewModel.IsLoggedIn)
+            {
+                loginImage.Source = loginViewModel.LoginImage;
+                miniMenu.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                loginImage.Source = null;
+                miniMenu.Visibility = Visibility.Collapsed;
+            }
+        }
+
 
         private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {

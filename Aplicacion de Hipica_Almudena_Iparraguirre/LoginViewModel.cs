@@ -58,7 +58,7 @@ namespace Aplicacion_de_Hipica_Almudena_Iparraguirre
                 // Puedes utilizar aquí tu propia lógica para cargar una imagen aleatoria
                 // Ejemplo:
                 var randomImage = GetRandomLoginImage();
-                LoginImage = new BitmapImage(new Uri(randomImage));
+                //LoginImage = new BitmapImage(new Uri(randomImage));
             }
             else
             {

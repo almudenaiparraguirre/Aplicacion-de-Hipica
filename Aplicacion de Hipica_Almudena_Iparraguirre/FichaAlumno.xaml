@@ -16,12 +16,6 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -33,14 +27,28 @@
 
             <TextBlock Width="600" Height="Auto" Background="White" Grid.Row="1" 
                        Margin="0,30,0,0">
-                <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" Width="589" Margin="0,0,0,20">
                     <TextBlock Text="Ficha del alumno" FontFamily="Karla" Foreground="#B71C1C" FontSize="30"
-                           FontWeight="DemiBold" Margin="10,10,0,0"></TextBlock>
-                <TextBlock Text="Alumno apuntado en la hipica" FontFamily="Karla" FontSize="18"
-                           FontWeight="DemiBold" Margin="10,20,0,0"></TextBlock>
-                    <TextBox Margin="10,20,0,0" Width="Auto"></TextBox>
+                           FontWeight="DemiBold" Margin="10,10,0,0"/>
+                    <TextBlock Text="Alumno apuntado en la hipica" FontFamily="Karla" FontSize="18"
+                           FontWeight="DemiBold" Margin="10,20,0,0"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Alumno" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Nombre*" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Primer apellido*" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Segundo apellido*" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Teléfono" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBlock Text="Fecha de nacimiento" FontSize="18" Margin="5,15,0,0" FontFamily="Karla" FontWeight="DemiBold"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="Correo electrónico" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <TextBox Margin="10,20,0,0" Width="Auto" Height="35" Text="DNI/NIE" VerticalAlignment="Center" Foreground="#9C9898"/>
+                    <Button Content="Guardar" Width="100" Height="30" Margin="10,10,0,0"/>
                 </StackPanel>
             </TextBlock>
+
+            <TextBlock Text="Aviso Legal | Política de Privacidad | Política de Redes Sociales | Política de Cookies" Grid.Row="3" TextAlignment="Center"
+                       Margin="0,40,0,0"/>
+            <TextBlock Text="GESTHIP® - Copyright - 2022" Grid.Row="4" TextAlignment="Center"
+                       Margin="0,0,0,5"/>
         </Grid>
     </ScrollViewer>
 </Window>
